@@ -12,5 +12,6 @@ test:
 	echo 'Running test...'
 start:
 	echo 'Application running...'
+	export JENKINS_NODE_COOKIE='dontKillMe'
 	nohup venv/bin/python main.py & >log.txt 2>errs.txt
-	sh pp.sh
+	# sh pp.sh
