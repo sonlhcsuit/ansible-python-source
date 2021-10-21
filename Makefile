@@ -12,4 +12,5 @@ test:
 	echo 'Running test...'
 start:
 	echo 'Application running...'
-	venv/bin/python main.py &
+	nohup venv/bin/python main.py & >log.txt 2>errs.txt
+	sh pp.sh
