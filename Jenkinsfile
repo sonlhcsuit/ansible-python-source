@@ -14,7 +14,10 @@ pipeline {
 		}
 		stage('Deploy') {
 			steps {
-				sh 'make start'
+				/* sh 'make start' */
+				keepRunning {
+					sh 'make start'
+				}
 			}
 		}
 	}
