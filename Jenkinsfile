@@ -14,7 +14,7 @@ pipeline {
 		}
 		stage('Deploy') {
 			steps {
-				sh 'make start'
+				sh 'nohup ./venv/bin/python main.py &'
 			}
 		}
 	}
