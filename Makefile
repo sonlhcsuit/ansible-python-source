@@ -7,4 +7,5 @@ install:
 test:
 	echo 'Running test...'
 start:
-	venv/bin/python main.py
+	echo 'Application running...'
+	venv/bin/python main.py &
