@@ -1,3 +1,5 @@
+stop:
+	lsof -ti :6000 | xargs kill 
 clean:
 	echo 'Cleaning...'
 	rm -rf venv
@@ -8,11 +10,14 @@ install:
 	echo 'Install packages...'
 	venv/bin/pip install -r requirements.txt
 build: clean setup install
+
 test:
 	echo 'Running test...'
+
 start:
 	# echo 'Application running...'
 	# export JENKINS_NODE_COOKIE='dontKillMe'
 	# nohup 
 	venv/bin/python main.py & >log.txt 2>errs.txt
 	# sh pp.sh
+restart: stop start
