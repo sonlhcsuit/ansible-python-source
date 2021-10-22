@@ -16,7 +16,7 @@ pipeline {
 			steps {
 				/* sh 'make start' */
 				keepRunning {
-					sh 'make start'
+					sh 'make restart'
 				}
 			}
 		}

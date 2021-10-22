@@ -1,5 +1,5 @@
 stop:
-	lsof -ti :6000 | xargs kill 
+	lsof -ti :6000 | xargs kill >/dev/null 2>/dev/null 
 clean:
 	echo 'Cleaning...'
 	rm -rf venv
