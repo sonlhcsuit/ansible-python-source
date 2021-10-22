@@ -5,4 +5,4 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-	return {"message": "Welcome to the application"}
+	return {"message": "Welcome to the application - changed"}
